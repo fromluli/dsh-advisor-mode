@@ -1,0 +1,16 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 顾问模式占位图标：左侧主模型气泡 + 右侧顾问气泡（更小的「第二意见」），中间一条咨询箭头。 -->
+  <rect x="4" y="7" width="17" height="13" rx="3.5" fill="url(#main)" />
+  <path d="M9.5 20v4.2c0 .5.6.8 1 .5l4.6-4.7H9.5Z" fill="url(#main)" />
+  <rect x="17" y="16" width="15" height="11" rx="3.5" fill="#F2AF63" />
+  <path d="M27.5 27v3.4c0 .5-.6.8-1 .5L22.4 27h5.1Z" fill="#F2AF63" />
+  <path d="M20.5 13.5h4" stroke="#45D9E7" stroke-width="1.8" stroke-linecap="round" />
+  <circle cx="24.5" cy="21.5" r="1.2" fill="#3A2A16" />
+  <circle cx="28.5" cy="21.5" r="1.2" fill="#3A2A16" />
+  <defs>
+    <linearGradient id="main" x1="6" y1="7" x2="14" y2="21" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7CB7FF" />
+      <stop offset="1" stop-color="#145AF3" />
+    </linearGradient>
+  </defs>
+</svg>

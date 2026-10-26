@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Advisor Mode",
+    "description": "Adds an \"Advisor Mode\" agent preset: the main model calls consult_advisor before consequential decisions, and a second, stronger model answers with the full session transcript as context."
+  }
+}

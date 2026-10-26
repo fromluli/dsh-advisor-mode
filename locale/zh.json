@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "顾问模式",
+    "description": "新增一个「顾问模式」agent preset：主模型在执行关键决策前调用 consult_advisor，由第二个（更强的）模型读完整会话后给出建议。"
+  }
+}

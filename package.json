@@ -1,0 +1,38 @@
+{
+  "name": "dsh-advisor-mode",
+  "version": "0.1.0",
+  "description": "顾问模式：给 DSH 加一个「顾问模式」agent preset —— 主模型在关键决策点调用 consult_advisor，由第二个（更强的）模型读完整会话后给出建议。",
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "icon.svg",
+    "locale/*.json",
+    "lib/index.js",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "test": "node --test tests/unit.test.mjs",
+    "test:integration": "node tests/integration/preset-smoke.mjs",
+    "test:e2e": "node tests/e2e/run-e2e.mjs",
+    "sync-preset": "node scripts/sync-preset.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  }
+}

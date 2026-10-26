@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: 单元测试（纯离线，零依赖）
+        run: node --test tests/unit.test.mjs
+      - name: 语法检查
+        run: |
+          for file in lib/index.js scripts/*.mjs tests/*.mjs tests/integration/*.mjs tests/e2e/*.mjs; do
+            node --check "$file"
+          done

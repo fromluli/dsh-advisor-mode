@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+
+# 本仓库的验收产物（E2E 会写 artifacts/ 与日志）
+artifacts/
+*.log
+
+# 编辑器
+.vscode/
+.idea/
